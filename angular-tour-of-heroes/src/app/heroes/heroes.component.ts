@@ -19,7 +19,9 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) { 
+    console.log(' --> constructor HeroesComponent anropad');
+  }
 
   ngOnInit() {
     this.getHeroes();
@@ -28,7 +30,7 @@ export class HeroesComponent implements OnInit {
   // ------- övriga metoder ---------
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
-    console.log('-->' + this.selectedHero.name);
+    console.log(' --> ' + this.selectedHero.name);
   }
 
   getHeroes(): void {
